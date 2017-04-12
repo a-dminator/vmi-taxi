@@ -1,4 +1,4 @@
-package io.adev.vmitaxi;
+package io.adev.vmitaxi.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import io.adev.vmitaxi.PreferLastObservable;
+import io.adev.vmitaxi.R;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;

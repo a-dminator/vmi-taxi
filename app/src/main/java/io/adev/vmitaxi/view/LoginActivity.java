@@ -1,5 +1,6 @@
 package io.adev.vmitaxi.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import io.adev.vmitaxi.R;
 import io.adev.vmitaxi.presenter.LoginPresenter;
 import io.adev.vmitaxi.presenter.contract.LoginContract;
+import ru.napoleonit.push.RegistrationIntentService;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View {
 
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        startService(new Intent(this, RegistrationIntentService.class));
 
         edLogin = (EditText) findViewById(R.id.edLogin);
         edPassword = (EditText) findViewById(R.id.edPassword);
